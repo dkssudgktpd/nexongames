@@ -1,0 +1,140 @@
+@charset 'utf-8';
+
+@font-face {
+    font-family: 'NEXON Lv2 Gothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXON Lv2 Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXON Lv2 Gothic Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: none; */
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'NEXON Lv2 Gothic', sans-serif;
+    font-size: 0.75em;
+    font-weight: 400;
+}
+
+/* 공통 */
+.inner {
+    width: 100%;
+    max-width: 1280px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    position: relative;
+    content: '';
+    width: 100%;
+    display: block;
+    clear: both;
+}
+
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    z-index: 99;
+}
+
+.header .inner {
+    width: 100%;
+    max-width: none;
+    height: 70px;
+    padding: 0px 65px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo a {
+    position: relative;
+    display: block;
+    background: url(../images/main_logo.png) no-repeat center;
+    background-size: cover;
+    width: 133px;
+    height: 42px;
+    
+    
+}
+.header-gnb{
+    position: relative;
+    display: block;
+}
+.mainmenu > li{
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0 40px;
+}
+.mainmenu > li > a{
+    position: relative;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    display: block;
+    font-size: 21px;
+    color: #222;
+}
+.header-lang{
+    width: 90px;
+    height: 30px;
+    background:#222;
+    border-radius: 20px;
+    
+}
+
+/* visual */
+.visual{
+
+}
+.sw-pagination{
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:0;
+    z-index: 999;
+}
