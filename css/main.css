@@ -119,13 +119,33 @@ body {
     color: #222;
 }
 .header-lang{
+    position: relative;
     width: 90px;
     height: 30px;
     background:#222;
     border-radius: 20px;
+    padding: 10px 15px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
     
 }
+.header-lang a{
+    color: #fff;
+    display: inline-block;
+    font-size: 11px;
+}
 
+.header-lang::after{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    content: '';
+    height: 8px;
+    width: 1px;
+    border-right : 1px solid #fff;
+}
 /* visual */
 .visual{
 
