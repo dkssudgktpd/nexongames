@@ -19,6 +19,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="js/swiper/swiper.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/swiper/swiper.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <!--[if lt IE 9]> 
@@ -58,14 +59,17 @@
         <div class="swiper-container sw-visual">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <video src="images/BlueArchive.mp4" autoplay muted></video>
+                    <video src="images/BlueArchive.mp4" autoplay muted loop></video>
                 </div>
                 <div class="swiper-slide">
-                    <video src="images/ProjectD.mp4" autoplay muted></video>
+                    <video src="images/ProjectD.mp4" autoplay muted loop></video>
                 </div>
                 <div class="swiper-slide">
-                    <video src="images/ProjectMagnum.mp4" autoplay muted></video>
+                    <video src="images/ProjectMagnum.mp4" autoplay muted loop></video>
                 </div>
+            </div>
+            <div class="sw-control">
+                <div class="swiper-pagination"></div>
             </div>
             <div class="sw-pagination"></div>
         </div>
@@ -73,7 +77,13 @@
         
     </section>
     <!-- company-info -->
-    <section class="company-info"></section>
+    <section class="company-info">
+        <div class="company-info-top">
+            <p>We Make Games Better</p>
+            <h3>NEXON GAMES</h3>
+        </div>
+        <div class="company-info-bottom"></div>
+    </section>
     <!-- interview -->
     <section class="interview">
         <div class="inner"></div>
