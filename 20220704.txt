@@ -1,0 +1,85 @@
+함수 => 자주 쓰는 기능
+1번만 사용하는 코드는 x
+위로가기
+
+일반함수
+
+function 함수이름 ('클래스명') {  사용 할 코드  }
+일반함수 호출 방법 = 함수이름('.클래스명');
+
+익명함수
+
+로고를 클릭 했다(동작이 다르다)
+function gotop(){}
+
+// gotop 과 golink의 일반함수가 두개 있다고 가정할 때,
+function gotop(){}
+
+function golink(){}
+
+logo.click(function(){
+  if(a == 1) {gotop();}
+  else{
+    golink();
+  }
+});
+
+let gotop = function(){}
+let golink = function(){}
+
+logo.click(gotop);
+logo.click(golink);
+
+2022/07/04
+
+*** Closer클로저 함수의 scope
+ : 함수 실행이 완료된 후 대상(변수) 유지? ***
+
+객체 (오브젝트) == {}
+
+객체 ==> 특성(속성): 값(속성값), color: 'red'
+기능(메소드) : 기능
+웃는기능 : fucntion(){하하하하...}
+function은 Function 객체
+
+let 황지원 = {
+gender : '여성',
+나이 : 16,
+키 : 170,
+취미 : function () {독서해요.},
+웃음소리 : function () {'하하하'}
+}
+
+----출력방법----
+황지원.웃음소리();
+황지원.키;
+
+
+객체생성자함수?
+
+object Literal (리터럴 객체)
+let human = {
+ eye = 2,
+ nose = 1,
+ smile : function(){},
+cry : function(){},
+}
+
+
+function human(){}
+//함수 실행
+let a = human();
+
+function Human(){
+ this.eye = 2;
+ this.nose = 1;
+ this.smile = function(){}
+ this.cry = function(){}
+}
+======> 객체를 여러개 만들기위해 사용.
+객체생성함수실행()
+let 홍길동 = new Human();
+let 둘리 = new Human();
+둘리.eye = 2
+둘리.nose = 3;
+this는 자기자신을 가르킴

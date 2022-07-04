@@ -98,83 +98,159 @@ body {
     background-size: cover;
     width: 133px;
     height: 42px;
-    
-    
+
+
 }
-.header-gnb{
+
+.header-gnb {
     position: relative;
     display: block;
 }
-.mainmenu > li{
+
+.mainmenu>li {
     position: relative;
     display: block;
     float: left;
     margin: 0 40px;
 }
-.mainmenu > li > a{
+
+.mainmenu>li>a {
     position: relative;
     font-family: 'NEXON Lv2 Gothic Bold';
     display: block;
     font-size: 21px;
     color: #222;
 }
-.header-lang{
+
+.header-lang {
     position: relative;
     width: 90px;
     height: 30px;
-    background:#222;
+    background: #222;
     border-radius: 20px;
     padding: 10px 15px;
     white-space: nowrap;
     display: flex;
     justify-content: space-between;
-    
+
 }
-.header-lang a{
+
+.header-lang a {
     color: #fff;
     display: inline-block;
     font-size: 11px;
 }
 
-.header-lang::after{
+.header-lang::after {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     content: '';
     height: 8px;
     width: 1px;
-    border-right : 1px solid #fff;
+    border-right: 1px solid #fff;
 }
+
 /* visual */
-.visual{
-
-}
-.swiper-container{
+.visual {
     position: relative;
+    width: 100%;
+    height: 56.25vw;
 }
 
-.visual video{
+.sw-visual {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+
+}
+
+.visual video {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
 }
-.sw-control{
+
+.sw-control {
     position: absolute;
     display: block;
     left: 50%;
     transform: translateX(-50%);
-    bottom:40px;
+    bottom: 40px;
     z-index: 999;
     width: 60%;
     height: 3px;
 }
-.swiper-pagination{
+
+.swiper-pagination {
     width: 100%;
     height: 100%;
 }
 
-.swiper-pagination-progressbar-fill{
+.swiper-pagination-progressbar-fill {
     --swiper-theme-color: #fff;
+}
+
+/* company-info */
+.company-info {
+    width: 100%;
+    height: 500px;
+    background: #fff;
+    margin-top: -410px;
+    z-index: 1;
+    padding-top: 100px;
+}
+
+.company-info .inner {
+    position: relative;
+}
+
+.company-info-top {
+    text-align: center;
+}
+
+.bar {
+    display: block;
+    margin: 0 auto;
+    width: 1px;
+    height: 50px;
+    background-color: #222;
+}
+
+.company-info-top p {
+    font-size: 66px;
+    font-family: 'NEXON Lv2 Gothic Regular';
+    font-weight: 300;
+    padding-bottom: 15px;
+}
+
+.company-info-top h3 {
+    font-size: 66px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    padding-bottom: 50px;
+}
+
+.company-info-left {
+    float: left;
+    padding-top: 280px;
+}
+
+.company-info-right {
+    position: absolute;
+    right: -15%;
+    top: 50%;
+    transform: translateY(-30%);
+}
+
+.company-info-left p {
+    font-size: 30px;
+    padding-bottom: 55px;
+    line-height: 1.6em;
+    font-weight: bold;
 }
