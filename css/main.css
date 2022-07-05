@@ -48,7 +48,7 @@ html {
 }
 
 body {
-    font-family: 'NEXON Lv2 Gothic', sans-serif;
+    font-family: "NEXON Lv2 Gothic", sans-serif;
     font-size: 0.75em;
     font-weight: 400;
 }
@@ -156,16 +156,15 @@ body {
 .visual {
     position: relative;
     width: 100%;
-    height: 56.25vw;
+    height: 100%;
 }
 
 .sw-visual {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
 
 
 }
@@ -180,25 +179,30 @@ body {
 .sw-control {
     position: absolute;
     display: block;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 40px;
+    right: 10%;
+    bottom: 45%;
     z-index: 999;
-    width: 60%;
-    height: 3px;
+    margin: 0 auto;
 }
 
-.swiper-pagination {
+.sw-visual-pg {
     width: 100%;
     height: 100%;
+    font-size: 17px;
+    color: #fff;
 }
-
-.swiper-pagination-progressbar-fill {
-    --swiper-theme-color: #fff;
+.sw-visual-next{
+    width: 31px;
+    height: 26px;
+    background: url(../images/next.png) no-repeat center;
+    background-size: cover;
+    cursor: pointer;
 }
 
 /* company-info */
 .company-info {
+    display: block;
+    position: relative;
     width: 100%;
     height: 500px;
     background: #fff;
@@ -243,11 +247,13 @@ body {
 
 .company-info-right {
     position: absolute;
-    right: -15%;
+    left: 45%;
     top: 50%;
     transform: translateY(-30%);
 }
-
+.company-info-right img{
+    width: 47.45vw;
+}
 .company-info-left p {
     font-size: 30px;
     padding-bottom: 55px;

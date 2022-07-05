@@ -2,15 +2,16 @@ $(document).ready(function () {
     window.onload = function () {
         let swiper = new Swiper(".sw-visual", {
             loop:true,
-            pagination: {
-                el: ".swiper-pagination",
-                type: "progressbar",
+            autoplay:{
+            delay:20000
             },
-            // pagination:{
-                //     el: ".sw-pagination",
-                // type: "fraction",
-            // }
-
+            pagination:{
+                el: ".sw-visual-pg",
+                type: "fraction"
+            },
+            navigation:{
+                nextEl:'.sw-visual-next'
+            }
         });
     };
 });
