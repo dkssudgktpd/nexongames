@@ -50,7 +50,7 @@ html {
 body {
     font-family: "NEXON Lv2 Gothic", sans-serif;
     font-size: 0.75em;
-    font-weight: 400;
+    /* font-weight: 400; */
 }
 
 /* 공통 */
@@ -191,7 +191,8 @@ body {
     font-size: 17px;
     color: #fff;
 }
-.sw-visual-next{
+
+.sw-visual-next {
     width: 31px;
     height: 26px;
     background: url(../images/next.png) no-repeat center;
@@ -204,11 +205,12 @@ body {
     display: block;
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 100%;
     background: #fff;
     margin-top: -410px;
     z-index: 1;
     padding-top: 100px;
+    margin-bottom: 200px;
 }
 
 .company-info .inner {
@@ -220,11 +222,13 @@ body {
 }
 
 .bar {
+    position: relative;
     display: block;
     margin: 0 auto;
     width: 1px;
     height: 50px;
     background-color: #222;
+    z-index: 1;
 }
 
 .company-info-top p {
@@ -247,16 +251,109 @@ body {
 
 .company-info-right {
     position: absolute;
-    left: 45%;
-    top: 50%;
+    left: 43%;
+    top: 60%;
     transform: translateY(-30%);
 }
-.company-info-right img{
+
+.company-info-right img {
     width: 47.45vw;
 }
+
 .company-info-left p {
     font-size: 30px;
     padding-bottom: 55px;
     line-height: 1.6em;
     font-weight: bold;
+    font-family: 'NEXON Lv2 Gothic Light';
 }
+
+/* interview */
+.interview {
+    position: relative;
+    display: block;
+    padding-top: 250px;
+    padding-bottom: 380px;
+    background: url(../images/main_mid_bg_02_new.jpg) no-repeat center;
+    background-size: cover;
+}
+.interview .inner{
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.interview h2 {
+    font-size: 65px;
+    padding-bottom: 10px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    color: #222;
+}
+
+.interview-box {
+    margin-top: 50px;
+}
+
+.interview-left {
+    position: relative;
+    display: block;
+    margin-right: 100px;
+    float: left;
+    padding-left: 100px;
+}
+
+.interview-left img {
+    width: 294px;
+}
+
+.interview-right {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.interview-right .interviewee {
+    display: block;
+    font-size: 18px;
+    color: #cad401;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    padding-bottom: 25px;
+}
+
+.interview-right h3 {
+    font-size: 45px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    color: #222;
+    padding-bottom: 65px;
+    display: inline-block;
+}
+
+.interview-right span {
+    display: inline-block;
+    font-size: 18px;
+    color: #999999;
+    font-family: 'NEXON Lv2 Gothic';
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.interview-right h4 {
+    position: relative;
+    display: block;
+    font-size: 33px;
+    color: #222;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    margin-bottom: 20px;
+    line-height: 1.2em;
+}
+
+.interview-right p {
+    font-size: 18px;
+    line-height: 1.6em;
+    padding-left: 18px;
+    color: #222;
+    font-family: 'NEXON Lv2 Gothic Light';
+}
+
+/* news */
+/* careers */
+/* footer */
