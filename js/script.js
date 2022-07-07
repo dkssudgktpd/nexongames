@@ -17,7 +17,8 @@ $(document).ready(function () {
                     const videos = document.querySelectorAll(".swiper-slide video");
                     videos[this.activeIndex].currentTime = 0;
                     videos[this.activeIndex].play();
-                    console.log(videos[this.activeIndex].duration)
+                    nextVideo(videos[this.activeIndex].duration*1000)
+                    
                     // $('.video').eq(this.realIndex).get(0).play();
                 }
             }
@@ -32,3 +33,9 @@ $(document).ready(function () {
         });
     };
 });
+
+function nextVideo(time){
+    setTimeout(() => {
+        document.querySelector(".sw-visual-next").click();
+    },time)
+}

@@ -78,6 +78,7 @@ body {
     width: 100%;
     display: block;
     z-index: 99;
+    box-shadow : 1px 1px 8px rgb(0 0 0 / 10%);
 }
 
 .header .inner {
@@ -85,7 +86,7 @@ body {
     max-width: none;
     height: 70px;
     padding: 0px 65px;
-    background-color: aqua;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -288,7 +289,9 @@ body {
     font-family: 'NEXON Lv2 Gothic Bold';
     color: #222;
 }
-
+sw-interview{
+    position: relative;
+}
 .interview-box {
     margin-top: 50px;
 }
@@ -353,7 +356,107 @@ body {
     color: #222;
     font-family: 'NEXON Lv2 Gothic Light';
 }
+.sw-iv-control{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.sw-iv-control span{
+    font-size: 20px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    color: #222;
+    position: relative;
+    display: inline-block;
+    right: 0;
+    transition: all 0.2s;
+    cursor: pointer;
+}
 
+.sw-iv-control span:nth-child(1):hover{
+    right: 15px;
+}
+.sw-iv-control span:last-child:hover{
+    right: -15px;
+}
+.sw-iv-prev{
+    position: relative;
+    display: inline-block;
+    width: 17px;
+    height: 8px;
+    background: url(../images/slide_prev.png) no-repeat  center;
+    border: 0;
+
+}
+.sw-iv-control .iv-bar{
+display: inline-block;
+width: 1px;
+height: 10px;
+background-color: #ddd;
+margin: 0 10px;
+
+}
+.sw-iv-next{
+    position: relative;
+    display: inline-block;
+    width: 17px;
+    height: 8px;
+    background: url(../images/slide_next.png) no-repeat  center;
+    border: 0;
+}
 /* news */
+.news .inner{
+    padding-bottom: 210px;
+    position: relative;
+}
+.news h2{
+    font-size: 65px;
+    padding-bottom: 80px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+}
+
+.news-gallery{
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+}
+.asd{
+    margin-right: 0%;
+}
+
+.news-gallery img{
+    cursor: pointer;
+    margin-bottom: 40px;
+    width: 100%;
+}
+.news-tag{
+    
+    font-size: 14px;
+    font-weight: bold;
+}
+.news-bar{
+display: inline-block;
+width: 1px;
+height: 6px;
+background-color: #ddd;
+}
+.news-gallery span{
+    font-size: 14px;
+    color: #aeaeae;
+    
+}
+.news-title{
+    font-size: 24px;
+    color: #191b1d;
+    padding-top: 10px;
+    display: block;
+    font-weight: bold;
+    min-height: 84px;
+    white-space: wrap;
+}
+.news-gallery p {
+    font-size: 15px;
+    color: #888;
+    line-height: 1.4em;
+}
 /* careers */
 /* footer */
