@@ -289,7 +289,7 @@ body {
     font-family: 'NEXON Lv2 Gothic Bold';
     color: #222;
 }
-sw-interview{
+.sw-interview{
     position: relative;
 }
 .interview-box {
@@ -360,23 +360,26 @@ sw-interview{
     position: absolute;
     right: 0;
     bottom: 0;
+    z-index: 999;
 }
-.sw-iv-control span{
+.sw-iv-control button{
     font-size: 20px;
     font-family: 'NEXON Lv2 Gothic Bold';
     color: #222;
     position: relative;
     display: inline-block;
-    right: 0;
+    padding-right: 0;
     transition: all 0.2s;
     cursor: pointer;
+    border: 0;
+    background-color: transparent;
 }
 
-.sw-iv-control span:nth-child(1):hover{
-    right: 15px;
+.sw-iv-control button:nth-child(1):hover{
+    padding-right: 15px;
 }
-.sw-iv-control span:last-child:hover{
-    right: -15px;
+.sw-iv-control button:last-child:hover{
+    padding-right: -15px;
 }
 .sw-iv-prev{
     position: relative;
@@ -459,4 +462,33 @@ background-color: #ddd;
     line-height: 1.4em;
 }
 /* careers */
+.careers .inner{
+    position: relative;
+    margin-bottom: 120px;
+}
+.careers h2{
+    font-size: 65px;
+    padding-bottom: 80px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+}
+.careerspic{
+    margin-bottom: 180px;
+}
+.careerstxt{
+    position: absolute;
+    left: 0;
+    bottom: 5.2vw;
+    background-color: #fff;
+    padding-top: 50px;
+    padding-right: 65px;
+}
+.careerstxt p{
+    font-size: 36px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    line-height: 1.2;
+}
 /* footer */
+.footer{
+    background-color: #f3f3f3;
+    height: 500px;
+}
