@@ -50,6 +50,7 @@ html {
 body {
     font-family: "NEXON Lv2 Gothic", sans-serif;
     font-size: 0.75em;
+    overflow-x:hidden ;
     /* font-weight: 400; */
 }
 
@@ -78,7 +79,7 @@ body {
     width: 100%;
     display: block;
     z-index: 99;
-    box-shadow : 1px 1px 8px rgb(0 0 0 / 10%);
+    box-shadow: 1px 1px 8px rgb(0 0 0 / 10%);
 }
 
 .header .inner {
@@ -278,20 +279,24 @@ body {
     background: url(../images/main_mid_bg_02_new.jpg) no-repeat center;
     background-size: cover;
 }
-.interview .inner{
+
+.interview .inner {
     position: relative;
     display: block;
     overflow: hidden;
 }
+
 .interview h2 {
     font-size: 65px;
     padding-bottom: 10px;
     font-family: 'NEXON Lv2 Gothic Bold';
     color: #222;
 }
-.sw-interview{
+
+.sw-interview {
     position: relative;
 }
+
 .interview-box {
     margin-top: 50px;
 }
@@ -356,13 +361,15 @@ body {
     color: #222;
     font-family: 'NEXON Lv2 Gothic Light';
 }
-.sw-iv-control{
+
+.sw-iv-control {
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: 999;
 }
-.sw-iv-control button{
+
+.sw-iv-control button {
     font-size: 20px;
     font-family: 'NEXON Lv2 Gothic Bold';
     color: #222;
@@ -375,79 +382,90 @@ body {
     background-color: transparent;
 }
 
-.sw-iv-control button:nth-child(1):hover{
+.sw-iv-control button:nth-child(1):hover {
     padding-right: 15px;
 }
-.sw-iv-control button:last-child:hover{
+
+.sw-iv-control button:last-child:hover {
     padding-right: -15px;
 }
-.sw-iv-prev{
+
+.sw-iv-prev {
     position: relative;
     display: inline-block;
     width: 17px;
     height: 8px;
-    background: url(../images/slide_prev.png) no-repeat  center;
+    background: url(../images/slide_prev.png) no-repeat center;
     border: 0;
 
 }
-.sw-iv-control .iv-bar{
-display: inline-block;
-width: 1px;
-height: 10px;
-background-color: #ddd;
-margin: 0 10px;
+
+.sw-iv-control .iv-bar {
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    background-color: #ddd;
+    margin: 0 10px;
 
 }
-.sw-iv-next{
+
+.sw-iv-next {
     position: relative;
     display: inline-block;
     width: 17px;
     height: 8px;
-    background: url(../images/slide_next.png) no-repeat  center;
+    background: url(../images/slide_next.png) no-repeat center;
     border: 0;
 }
+
 /* news */
-.news .inner{
+.news .inner {
     padding-bottom: 210px;
     position: relative;
 }
-.news h2{
+
+.news h2 {
     font-size: 65px;
     padding-bottom: 80px;
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
-.news-gallery{
+.news-gallery {
     width: 30%;
     margin-right: 5%;
     float: left;
 }
-.asd{
+
+.asd {
     margin-right: 0%;
 }
 
-.news-gallery img{
+.news-gallery img {
     cursor: pointer;
     margin-bottom: 40px;
     width: 100%;
 }
-.news-tag{
-    
+
+.news-tag {
+
     font-size: 14px;
     font-weight: bold;
 }
-.news-bar{
-display: inline-block;
-width: 1px;
-height: 6px;
-background-color: #ddd;
+
+.news-bar {
+    display: inline-block;
+    width: 1px;
+    height: 6px;
+    background-color: #ddd;
 }
-.news-gallery span{
+
+.news-gallery span {
     font-size: 14px;
     color: #aeaeae;
-    
+
 }
-.news-title{
+
+.news-title {
     font-size: 24px;
     color: #191b1d;
     padding-top: 10px;
@@ -456,25 +474,30 @@ background-color: #ddd;
     min-height: 84px;
     white-space: wrap;
 }
+
 .news-gallery p {
     font-size: 15px;
     color: #888;
     line-height: 1.4em;
 }
+
 /* careers */
-.careers .inner{
+.careers .inner {
     position: relative;
     margin-bottom: 120px;
 }
-.careers h2{
+
+.careers h2 {
     font-size: 65px;
     padding-bottom: 80px;
     font-family: 'NEXON Lv2 Gothic Bold';
 }
-.careerspic{
+
+.careerspic {
     margin-bottom: 180px;
 }
-.careerstxt{
+
+.careerstxt {
     position: absolute;
     left: 0;
     bottom: 5.2vw;
@@ -482,13 +505,144 @@ background-color: #ddd;
     padding-top: 50px;
     padding-right: 65px;
 }
-.careerstxt p{
+
+.careerstxt p {
     font-size: 36px;
     font-family: 'NEXON Lv2 Gothic Bold';
     line-height: 1.2;
 }
+
 /* footer */
-.footer{
+.footer {
     background-color: #f3f3f3;
-    height: 500px;
 }
+
+.footer .inner {
+
+}
+.footer-top{
+    position: relative;
+    padding: 50px 0;
+    padding-bottom: 60px;
+}
+.intro {
+    float: left;
+}
+
+.intro p {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #999;
+    line-height: 1.6em;
+}
+
+.ft-gnb {
+    float: right;
+
+}
+
+.ft-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ft-menu>li {
+    display: block;
+    margin-right: 55px;
+    text-align: left;
+
+}
+.ft-menu>li:last-child{
+    margin-right: 0;
+}
+
+.ft-menu>li>a {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 20px;
+
+}
+
+.ft-depth2 li a {
+    display: inline-block;
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+.bar{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    content: '';
+    max-width: none;
+    width: 100vw;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.footer-bottom {
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copy{
+    font-size: 14px;
+    color: #999;
+    line-height: 1.6em;
+    font-family: NEXON Lv2 Gothic Light;
+}
+
+.footer-depth1 {
+    position: relative;
+}
+.footer-depth1 > li{
+    padding: 30px 0;
+}
+.footer-depth1 > li > a{
+    position: relative;
+    display: block;
+    width: 220px;
+    color: #999;
+    font-size: 14px;
+}
+.footer-depth1 > li > a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url(../images/arrow-top.png) no-repeat center;
+}
+.footer-depth2 {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -200px;
+    z-index: 9;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+}
+
+.footer-depth1 > li:hover .footer-depth2{
+    display: block;
+}
+
+.footer-depth2 li {}
+
+.footer-depth2 li a {
+    width: 220px;
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    background-color: #f1f1f1;
+}
+.footer-depth2 li:hover a {
+    background-color: #ddd;
+} 
