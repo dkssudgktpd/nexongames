@@ -90,7 +90,6 @@ body {
     border-radius: 30px;
     text-align: center;
     padding: 50px;
-    z-index: 1;
 }
 .modal-main h2{
     font-size: 30px;
@@ -133,6 +132,85 @@ body {
 .top-bt:hover{
     background-color: #019fe8;
 }
+.mb-bt{
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 23px;
+    z-index: 9999;
+    border: 0;
+    cursor: pointer;
+}
+.mb-bt::before{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: #000;
+}
+.mb-bt-line{
+    margin: 5px 0;
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: #000;
+}
+.mb-bt::after{
+    content: '';
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: #000;
+}
+.mb-wrap{
+    position: fixed;
+    right: -75%;
+    top: 0;
+    width: 75%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 9999;
+    padding-top: 60px;
+    transition: right 0.3s;
+}
+.mb-wrap .lang{
+    top: 27px;
+    right: 7%;
+}
+.mb-close{
+    position: absolute;
+    right: 2%;
+    top: 30px;
+    display: block;
+    font-size: 20px;
+    color: #888
+}
+
+.mb-depth1 > li{
+    line-height: 50px;
+    border-top: 1px solid #eee;
+
+}
+.mb-color{
+    background-color: #f3f3f3;
+} 
+.mb-depth1 > li:last-child{
+    border-bottom: 1px solid #eee;
+}
+.mb-depth1 > li >a{
+    padding: 0 15px;
+    display: block;
+    font-size: 16px;
+    color: #3c6189;
+    font-weight: 600;
+}
+.mb-depth2{
+    display: none;
+}
+.mb-depth2 li{
+    padding: 0 15px;
+    background-color: #eee;
+}
 /* header */
 .header {
     position: fixed;
@@ -158,7 +236,7 @@ body {
 
 .header-logo {
     position: absolute;
-    right: calc(100% + 120px);
+    left: 5%;
     top: 14px;
     display: block;
     background: url(../images/main_logo.png) no-repeat center;
@@ -226,9 +304,9 @@ body {
 
 
 
-.header-lang {
+.lang {
     position: absolute;
-    left: calc(100% + 183px);
+    right: 5%;
     top: 20px;
     width: 90px;
     height: 30px;
@@ -238,23 +316,22 @@ body {
     white-space: nowrap;
     display: flex;
     justify-content: space-between;
-
 }
 
-.header-lang a {
+.lang a {
     color: #fff;
     display: inline-block;
     font-size: 11px;
     font-weight: 600;
 }
-.header-lang .header-lang-eng{
+.lang .lang-eng{
     color: #666;
     transition: color 0.1s;
 }
-.header-lang .header-lang-eng:hover{
+.lang .lang-eng:hover{
     color: #999;
 }
-.header-lang::after {
+.lang::after {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -265,13 +342,30 @@ body {
     border-right: 1px solid #fff;
 }
 
-
+@media all and (max-width : 1200px ){
+    .mainmenu>li>a{
+        font-size: 15px;
+    }
+}
+@media all and (max-width : 1050px){
+    .mainmenu{
+        display: none;
+    }
+    .header-lang{
+        right: 8%;
+    }
+    .mb-bt{
+        display: block;
+    }
+}
 /* visual */
 
 .sw-visual {
     position: relative;
 }
-
+.swiper-slide video{
+    width: 100%;
+}
 .sw-visual-control {
     position: absolute;
     left: 50%;

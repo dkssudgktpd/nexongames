@@ -14,7 +14,31 @@ $(document).ready(function () {
             $('body').css('overflow','auto');
             $('body').css('overflow-x','hidden');
         })
-
+        //모바일메뉴
+        let mbBt = $('.mb-bt');
+        let mbWrap = $('.mb-wrap');
+        let mbClose = $('.mb-close');
+        mbBt.click(function(){
+            mbWrap.css('right','0');
+        });
+        mbClose.click(function(){
+            mbWrap.css('right','-75%')
+        });
+        let mbDepth1_li_a = $('.mb-depth1 > li > a');
+        let mbDepth2 = $('.mb-depth2');
+$.each(mbDepth1_li_a,function(index){
+    $(this).click(function(){
+        mbDepth2.stop().slideUp();
+        mbDepth2.eq(index).stop().slideToggle();
+        if(mbDepth1_li_a.hasClass('mb-color')){
+            $(this).removeClass('mb-color');
+        }else{
+            $(this).addClass('mb-color');
+        }
+        
+        
+    })
+});
 
         let topBt = $('.top-bt');
         let header = $('.header');
