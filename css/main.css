@@ -50,7 +50,7 @@ html {
 body {
     font-family: "NEXON Lv2 Gothic", sans-serif;
     font-size: 0.75em;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* 공통 */
@@ -140,6 +140,7 @@ body {
     z-index: 9999;
     border: 0;
     cursor: pointer;
+    background-color: transparent;
 }
 .mb-bt::before{
     content: '';
@@ -161,6 +162,15 @@ body {
     width: 25px;
     height: 4px;
     background-color: #000;
+}
+.mb-back{
+    content: '';
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9998;
+    display: none;
 }
 .mb-wrap{
     position: fixed;
@@ -192,7 +202,7 @@ body {
 
 }
 .mb-color{
-    background-color: #f3f3f3;
+    background-color: #000;
 } 
 .mb-depth1 > li:last-child{
     border-bottom: 1px solid #eee;
@@ -210,6 +220,11 @@ body {
 .mb-depth2 li{
     padding: 0 15px;
     background-color: #eee;
+}
+@media all and (max-width:600px){
+    .mb-wrap .lang{
+        right: 10%;
+    } 
 }
 /* header */
 .header {
@@ -351,11 +366,16 @@ body {
     .mainmenu{
         display: none;
     }
-    .header-lang{
+    .header .lang{
         right: 8%;
     }
     .mb-bt{
         display: block;
+    }
+}
+@media all and (max-width : 650px){
+    .header .lang{
+        display: none;
     }
 }
 /* visual */
@@ -370,7 +390,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 400px;
+    bottom: 21vw;
     display: block;
     width: 70%;
     height: 100px;
@@ -421,7 +441,14 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     transition: width 0.3s;
 }
-
+@media all and (max-width : 1050px){
+    .visual{
+        margin-top: 70px;
+    }
+    .sw-visual-control{
+        bottom: 10vw;
+    }
+}
 /* company-info */
 .company-info {
     display: block;
@@ -429,9 +456,9 @@ body {
     width: 100%;
     height: 100%;
     background: #fff;
-    margin-top: -410px;
+    margin-top: -21vw;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 4.2vw;
     margin-bottom: 200px;
 }
 
@@ -467,8 +494,7 @@ body {
 }
 
 .company-info-left {
-    float: left;
-    padding-top: 280px;
+    padding-top: 15vw;
 }
 
 .company-info-right {
@@ -489,7 +515,45 @@ body {
     font-weight: bold;
     font-family: 'NEXON Lv2 Gothic Light';
 }
+@media all and (max-width : 1150px){
+    .company-info .inner{
+        padding: 2.5vw;
+    }
+    .company-info-left p{
+        font-size: 25px;
+    }
+}
+@media all and (max-width : 1050px){
+    .company-info{
+        margin-top: -10vw;
+        margin-bottom: 38vw;
+    }
+    .company-info-left{
+        padding-top: 5vw;
+        text-align: center;
+    }
+    .company-info-right{
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+    }
 
+}
+@media all and (max-width : 800px){
+    .company-info-top p,
+    .company-info-top h3{
+        font-size: 8.25vw;
+    }
+    .company-info-left p{
+        font-size: 3vw;
+        padding-bottom: 5vw;
+    }
+}
+@media all and (max-width : 600px){
+    .bar2{
+        height: 8.6vw;
+    }
+}
 /* interview */
 .interview {
     position: relative;
@@ -523,10 +587,10 @@ body {
 
 .interview-left {
     position: relative;
-    display: block;
+    display: inline-block;
     margin-right: 100px;
-    float: left;
     padding-left: 100px;
+    vertical-align: bottom;
 }
 
 .interview-left img {
@@ -535,8 +599,8 @@ body {
 
 .interview-right {
     position: relative;
-    display: block;
-    float: left;
+    display: inline-block;
+
 }
 
 .interview-right .interviewee {
@@ -637,33 +701,87 @@ body {
     background: url(../images/slide_next.png) no-repeat center;
     border: 0;
 }
+@media all and (max-width : 1150px){
+    .interview .inner{
+        padding: 2.5vw;
+    }
+}
+@media all and (max-width : 1130px){
+.interview h2{
+    font-size: 50px;
+}
+.interview-left{
+    padding-left: 6.8vw;
+    margin-right: 6.8vw;
+}
+.interview-right{
+    margin-bottom: 30px;
+}
+.interview-right .interviewee{
+    font-size: 16px;
+}
+.interview-right h3{
+    font-size: 35px;
+    padding-bottom: 5vw;
+}
+.interview-right span{
+    font-size: 16px;
+}
+.interview-right h4{
+    font-size: 26px;
+}
+.interview-right p{
+    font-size: 16px;
+}
+}
+@media all and (max-width : 1000px){
+.interview-left{
+    display: block;
+    text-align: center;
+    margin-bottom: 3vw;
+}
+.interview-right{
+    display: block;
+    text-align: center;
 
+}
+}
+@media all and (max-width : 800px){
+    .interview{
+        padding-top: 30vw;
+    padding-bottom: 45vw;}
+}
+@media all and (max-width : 600px){
+    .interview h2{
+        font-size: 9vw;
+    }
+}
 /* news */
-.news .inner {
+.news {
     padding-bottom: 210px;
     position: relative;
 }
-
 .news h2 {
     font-size: 65px;
     padding-bottom: 80px;
     font-family: 'NEXON Lv2 Gothic Bold';
 }
 
-.news-gallery {
+.news-gallery{
     width: 30%;
     margin-right: 5%;
     float: left;
 }
-
-.asd {
-    margin-right: 0%;
+.news-gallery:nth-child(4){
+    margin-right: 0;
 }
+
 
 .news-gallery img {
     cursor: pointer;
     margin-bottom: 40px;
     width: 100%;
+    font-size: 0;
 }
 
 .news-tag {
@@ -700,9 +818,82 @@ body {
     color: #888;
     line-height: 1.4em;
 }
+.news-more::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+    background-color: #019fe8;
+    z-index: -1;
 
+}
+.news-more{
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    transition: right 0.2s;
+}
+.news-more::after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    right: -30px;
+    top: 50%;
+    width: 17px;
+    height: 8px;
+    transform: translateY(-50%);
+    background: url(../images/slide_next.png) no-repeat center;
+}
+.news-more:hover{
+    right: 30px;
+}
+@media all and (max-width : 1150px){
+    .news .inner{
+        padding: 2.5vw;
+    }
+}
+@media all and (max-width:1130px){
+    .news h2{
+        font-size: 50px;
+    }
+}
+@media all and (max-width:800px){
+    .news{
+        padding-bottom: 25vw;
+    }
+    .news h2{
+        padding-bottom: 10vw;
+    }
+    .news-gallery img{
+        margin-bottom: 5vw;
+    }
+    .news-gallery{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 5vw;
+    }
+    .news-title{
+        min-height: 60px;
+        font-size: 26px;
+    }
+    .news-gallery p{
+        font-size: 17px;
+    }
+}
+@media all and (max-width:600px){
+    .news h2{
+        font-size: 9vw;
+    }
+}
 /* careers */
-.careers .inner {
+.careers {
     position: relative;
     margin-bottom: 120px;
 }
@@ -714,13 +905,14 @@ body {
 }
 
 .careerspic {
+    width: 100%;
     margin-bottom: 180px;
 }
 
 .careerstxt {
     position: absolute;
     left: 0;
-    bottom: 5.2vw;
+    top: 68%;
     background-color: #fff;
     padding-top: 50px;
     padding-right: 65px;
@@ -731,7 +923,77 @@ body {
     font-family: 'NEXON Lv2 Gothic Bold';
     line-height: 1.2;
 }
+.careers-more::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #019fe8;
+    z-index: -1;
 
+}
+.careers-more{
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'NEXON Lv2 Gothic Bold';
+    transition: right 0.2s;
+}
+.careers-more::after{
+    content: '';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 17px;
+    height: 8px;
+    background: url(../images/slide_next.png) no-repeat center;
+}
+.careers-more:hover{
+    right: 30px;
+}
+@media all and (max-width : 1150px){
+    .careers .inner{
+        padding: 2.5vw;
+    }
+}
+@media all and (max-width:1130px){
+    .careers{
+        margin-bottom: 10.5vw;
+    }
+    .careers h2{
+        font-size: 50px;
+    }
+    .careerspic{
+        margin-bottom: 12.5vw;
+    }
+}
+@media all and (max-width:1000px){
+    .careerstxt{
+        padding-top: 5vw;
+        padding-right: 6.5vw;
+    }
+    .careerstxt p{
+        font-size: 32px;
+    }
+
+}
+@media all and (max-width:800px){
+    .careerstxt p{
+        font-size: 4vw;
+    }
+}
+@media all and (max-width:600px){
+    .careers h2{
+        font-size: 9vw;
+    }
+}
 /* footer */
 .footer {
     background-color: #f3f3f3;
@@ -782,6 +1044,7 @@ body {
     font-size: 15px;
     font-weight: 400;
     margin-bottom: 20px;
+    white-space: nowrap;
 
 }
 
@@ -790,6 +1053,7 @@ body {
     color: #999;
     font-size: 14px;
     margin-bottom: 10px;
+    white-space: nowrap;
 }
 
 .ft-depth2 li:hover a {
@@ -871,8 +1135,61 @@ body {
     padding: 12px 16px;
     display: block;
     background-color: #f1f1f1;
+    white-space: nowrap;
 }
 
 .footer-depth2 li:hover a {
     background-color: #ddd;
+}
+@media all and (max-width : 1150px){
+    .footer .inner{
+        padding: 2.5vw;
+    }
+}
+@media all and (max-width:880px){
+    .intro{
+        display: block;
+        width:100%;
+        text-align: center;
+        margin-bottom: 5vw;
+    }
+    .intro p{
+        font-size: 16px;
+    }
+    .ft-gnb{
+        width: 100%;
+    }
+    .ft-menu > li{
+        margin-right: 6.25vw;
+    }
+}
+@media all and (max-width:480px){
+    .ft-menu{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .ft-menu > li{
+        width: 28vw;
+        margin-right: 4vw;
+        /* margin-bottom: 3vw; */
+    }
+    .ft-depth2 li a {
+        font-size: 12px;
+    }
+    .intro p{
+        font-size: 14px;
+    }
+    .footer-bottom{
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .copy{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .footer-depth1{
+        margin:0 auto;
+
+    }
 }

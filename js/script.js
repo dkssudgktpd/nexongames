@@ -4,41 +4,67 @@ $(document).ready(function () {
         let modalWrap = $('.modal-wrap');
         let modalMain = $('.modal-main');
         let modalClose = $('.modal-close');
-        modalClose.click(function(){
+        modalClose.click(function () {
             modalWrap.fadeOut(500)
-            $('body').css('overflow','auto');
-            $('body').css('overflow-x','hidden');
+            $('body').css('overflow', 'auto');
+            $('body').css('overflow-x', 'hidden');
         });
-        modalWrap.click(function(){
+        modalWrap.click(function (event) {
             modalWrap.fadeOut(500);
-            $('body').css('overflow','auto');
-            $('body').css('overflow-x','hidden');
+            $('body').css('overflow', 'auto');
+            $('body').css('overflow-x', 'hidden');
         })
+        modalMain.click(function (event) {
+            event.stopPropagation();
+        })
+        
         //모바일메뉴
         let mbBt = $('.mb-bt');
         let mbWrap = $('.mb-wrap');
         let mbClose = $('.mb-close');
-        mbBt.click(function(){
-            mbWrap.css('right','0');
+        let mbBack = $('.mb-back');
+        mbBt.click(function () {
+            mbWrap.css('right', '0');
+            mbBack.show();
         });
-        mbClose.click(function(){
-            mbWrap.css('right','-75%')
+        mbClose.click(function () {
+            mbWrap.css('right', '-75%');
+            mbBack.hide();
         });
-        let mbDepth1_li_a = $('.mb-depth1 > li > a');
+
+        let mbMainmenu = $('.mb-mainmenu');
         let mbDepth2 = $('.mb-depth2');
-$.each(mbDepth1_li_a,function(index){
-    $(this).click(function(){
-        mbDepth2.stop().slideUp();
-        mbDepth2.eq(index).stop().slideToggle();
-        if(mbDepth1_li_a.hasClass('mb-color')){
-            $(this).removeClass('mb-color');
-        }else{
-            $(this).addClass('mb-color');
-        }
-        
-        
-    })
-});
+        $.each(mbMainmenu, function (index){
+
+            $(this).click(function () {
+                mbDepth2.stop().slideUp();
+                mbDepth2.eq(index).stop().slideToggle();
+                
+                $(this).removeClass('mb-color');
+                $(this).eq(index).toggleClass('mb-color');
+            })
+        });
+
+            
+        //모바일 메뉴가 아닌 밖을 눌렀을때 초기화
+        mbBack.click(function(){
+            mbMainmenu.removeClass('mb-color');
+            mbDepth2.stop().slideUp();
+            mbWrap.css('right','-75%');
+            mbBack.hide();
+        })
+
+        //모바일메뉴 초기화
+        $(window).resize(function(){
+            let temp = $(window).width();
+            if(temp > 1050){
+                // 윈도우의 너비가 1050이상일때, 펼쳐져있던메뉴가 닫히고 모바일메뉴도 닫힌다.
+                mbMainmenu.removeClass('mb-color');
+                mbDepth2.stop().slideUp();
+                mbWrap.css('right','-75%');
+                mbBack.hide();
+            }
+        })
 
         let topBt = $('.top-bt');
         let header = $('.header');
@@ -46,9 +72,11 @@ $.each(mbDepth1_li_a,function(index){
         let mainMenuMaxHeight = mainMenu.outerHeight();
         let mainMenuMinHeight = header.outerHeight();
 
-topBt.click(function(){
-    $('html, body').stop().animate({scrollTop : 0})
-})
+        topBt.click(function () {
+            $('html, body').stop().animate({
+                scrollTop: 0
+            })
+        })
         mainMenu.mouseenter(function () {
             header.css('height', mainMenuMaxHeight);
         });
@@ -69,9 +97,7 @@ topBt.click(function(){
         });
 
         swVisual.on('slideChange', function () {
-
             videoArr[videoIndex].pause();
-
             videoIndex = swVisual.activeIndex;
             videoArr[videoIndex].currentTime = 0;
             videoArr[videoIndex].play();
