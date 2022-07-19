@@ -261,11 +261,14 @@ body {
 
 
 }
-
+.gnb{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
 
 .mainmenu {
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
     text-align: center;
     position: relative;
     z-index: 1;

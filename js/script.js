@@ -17,7 +17,7 @@ $(document).ready(function () {
         modalMain.click(function (event) {
             event.stopPropagation();
         })
-        
+
         //모바일메뉴
         let mbBt = $('.mb-bt');
         let mbWrap = $('.mb-wrap');
@@ -35,33 +35,36 @@ $(document).ready(function () {
         let mbMainmenu = $('.mb-mainmenu');
         let mbDepth2 = $('.mb-depth2');
         $.each(mbMainmenu, function (index){
-
-            $(this).click(function () {
+            $(this).click(function(event){
+                event.preventDefault();
                 mbDepth2.stop().slideUp();
                 mbDepth2.eq(index).stop().slideToggle();
-                
-                $(this).removeClass('mb-color');
-                $(this).eq(index).toggleClass('mb-color');
-            })
+                if(mbMainmenu.eq(index).hasClass('mb-color')){
+                    mbMainmenu.removeClass('mb-color');
+                }else{
+                    mbMainmenu.removeClass('mb-color');
+                    mbMainmenu.eq(index).addClass('mb-color');
+                }
+            });
+
         });
 
-            
         //모바일 메뉴가 아닌 밖을 눌렀을때 초기화
-        mbBack.click(function(){
+        mbBack.click(function () {
             mbMainmenu.removeClass('mb-color');
             mbDepth2.stop().slideUp();
-            mbWrap.css('right','-75%');
+            mbWrap.css('right', '-75%');
             mbBack.hide();
         })
 
         //모바일메뉴 초기화
-        $(window).resize(function(){
+        $(window).resize(function () {
             let temp = $(window).width();
-            if(temp > 1050){
+            if (temp > 1050) {
                 // 윈도우의 너비가 1050이상일때, 펼쳐져있던메뉴가 닫히고 모바일메뉴도 닫힌다.
                 mbMainmenu.removeClass('mb-color');
                 mbDepth2.stop().slideUp();
-                mbWrap.css('right','-75%');
+                mbWrap.css('right', '-75%');
                 mbBack.hide();
             }
         })
