@@ -95,10 +95,12 @@ body {
     font-size: 30px;
     margin-bottom: 30px;
     color: #333;
+
 }
 .modal-main p{
     font-size: 13px;
     line-height: 20px;
+
 }
 .modal-main p strong{
     font-weight: 700;
@@ -114,6 +116,40 @@ body {
     cursor: pointer;
     
 }
+
+@media all and (max-width:800px){
+    .modal-main{
+        width: 80vw;
+    }
+}
+@media all and (max-width:700px){
+    .modal-main h2{
+        font-size: 25px;
+
+    }
+    .modal-main p{
+        font-size: 11px;
+
+    }
+    .modal-main p strong{
+        font-size: 13px;
+    }
+}
+@media all and (max-width:550px){
+    .modal-main h2{
+        font-size: 4.5vw;
+    }
+    .modal-main p{
+        font-size: 2vw;
+    }
+    .modal-main p strong{
+        font-size: 2.5vw;
+    }
+}
+
+
+
+
 .top-bt{
     position: fixed;
     right: 2%;
@@ -319,7 +355,10 @@ body {
     line-height: 35px;
     text-align: left;
 }
-
+.header-depth2 li a:hover{
+    color: #000;
+    font-weight: 700;
+}
 
 
 .lang {
@@ -662,7 +701,7 @@ body {
     color: #222;
     position: relative;
     display: inline-block;
-    padding-right: 0;
+    right: 0;
     transition: right 0.2s;
     cursor: pointer;
     border: 0;
@@ -705,11 +744,12 @@ body {
     border: 0;
 }
 @media all and (max-width : 1150px){
-    .interview .inner{
-        padding: 2.5vw;
-    }
+
 }
 @media all and (max-width : 1130px){
+    .interview .inner{
+        padding: 2.6vw;
+    }
 .interview h2{
     font-size: 50px;
 }
@@ -737,16 +777,23 @@ body {
     font-size: 16px;
 }
 }
-@media all and (max-width : 1000px){
+@media all and (max-width : 1062px){
+    .sw-interview{
+        overflow: hidden;
+    }
 .interview-left{
     display: block;
     text-align: center;
-    margin-bottom: 3vw;
 }
 .interview-right{
     display: block;
     text-align: center;
+}
+.sw-iv-control{
+    width: 100%;
 
+    text-align: center;
+    bottom: 0;
 }
 }
 @media all and (max-width : 800px){
@@ -755,8 +802,28 @@ body {
     padding-bottom: 45vw;}
 }
 @media all and (max-width : 600px){
+    .top-bt{
+        width: 50px;
+        height: 50px;
+        font-size: 13px;
+    }
     .interview h2{
         font-size: 9vw;
+    }
+    .interview-right .interviewee{
+        font-size: 2.7vw;
+    }
+    .interview-right h3{
+        font-size: 7vw;
+    }
+    .interview-right span{
+        font-size: 2.7vw;
+    }
+    .interview-right h4{
+        font-size: 5.5vw;
+    }
+    .interview-right p{
+        font-size: 3.8vw;
     }
 }
 /* news */
@@ -893,6 +960,21 @@ body {
 @media all and (max-width:600px){
     .news h2{
         font-size: 9vw;
+    }
+    .news-tag {
+        font-size: 2.3vw;
+    }
+    .news-gallery span {
+        font-size: 2.3vw;
+    }
+    
+    .news-title {
+        font-size: 4vw;
+        min-height: 10vw;
+    }
+    
+    .news-gallery p {
+        font-size: 2.5vw;
     }
 }
 /* careers */

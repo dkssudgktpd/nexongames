@@ -164,8 +164,8 @@ $(document).ready(function () {
         let swiper2 = new Swiper('.sw-interview', {
             loop: true,
             navigation: {
-                prevEl: '.sw-iv-prev1',
-                nextEl: '.sw-iv-next1'
+                prevEl: '.sw-iv-prev',
+                nextEl: '.sw-iv-next'
             }
         });
     };
