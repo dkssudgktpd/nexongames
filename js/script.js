@@ -1,22 +1,20 @@
 $(document).ready(function () {
     window.onload = function () {
-        //모달창닫기
-        let modalWrap = $('.modal-wrap');
-        let modalMain = $('.modal-main');
-        let modalClose = $('.modal-close');
+        const modal = $(".modal");
+        const modalClose = $(".modal-close");
+        const modalWrap = $(".modal-wrap");
+        modal.click(function () {
+            modal.fadeOut(500);
+            $("body").css("overflow", "auto");
+        });
         modalClose.click(function () {
-            modalWrap.fadeOut(500)
-            $('body').css('overflow', 'auto');
-            $('body').css('overflow-x', 'hidden');
+            modal.fadeOut(500);
+            $("body").css("overflow", "auto");
         });
         modalWrap.click(function (event) {
-            modalWrap.fadeOut(500);
-            $('body').css('overflow', 'auto');
-            $('body').css('overflow-x', 'hidden');
-        })
-        modalMain.click(function (event) {
             event.stopPropagation();
-        })
+        });
+
 
         //모바일메뉴
         let mbBt = $('.mb-bt');
